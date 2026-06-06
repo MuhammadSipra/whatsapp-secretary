@@ -12,9 +12,9 @@ const GROQ_MODEL = "llama-3.3-70b-versatile";
 const SYSTEM_PROMPT = "You are a helpful WhatsApp secretary for a business. You will be given business information. Answer customer questions politely based on that business information. Reply in the same language the customer uses - like Hindi, English & etc.";
 
 app.use(express.json());
-app.use(express.static("C:\\Users\\ADMIN\\Downloads\\whatsapp-secretary"));
+app.use(express.static(path.join(process.cwd())));
 app.get("/dashboard", (req, res) => {
-    res.sendFile("C:\\Users\\ADMIN\\Downloads\\whatsapp-secretary\\dashboard.html");
+  res.sendFile(path.join(process.cwd(), "dashboard.html"));
 });
 
 app.get("/", (req, res) => {
