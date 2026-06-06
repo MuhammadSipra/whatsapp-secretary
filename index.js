@@ -1,5 +1,5 @@
 const __dirname_fix = require('path').resolve();
-process.env.GROQ_API_KEY = "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";
+
 const express = require("express");
 const axios = require("axios");
 const path = require("path");
